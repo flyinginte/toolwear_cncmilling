@@ -22,9 +22,12 @@ experimentsPaths = glob.glob(args["dataset"] + args["extension"])
 
 #### 2) EXPLORATORY DATA ANALYSIS ####
 from dataloader import DataLoader
+import matplotlib.pyplot as plt
 
+# load experiment datasets
 dl = DataLoader()
-experiments = dl.load(experimentsPaths)
+experiments, outputs = dl.load(experimentsPaths)
+
 
 
 
