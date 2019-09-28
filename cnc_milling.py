@@ -2,13 +2,13 @@
 breakthroughs in terms of process optimization. Here, a relation between the measured variables and tool wear
 is sought. For that end, the following steps are undertaken:
 
-1) DATA VISUALIZATION;
-2) """
+1) Importing Files;
+2) Exploratory Data Analysis
+3) """
 
-#### Data Visualization ####
+#### 1) IMPORTING FILES ####
 import glob
 import argparse
-from imutils import paths
 
 # construct argument parser and parse arguments
 ap = argparse.ArgumentParser()
@@ -20,7 +20,11 @@ args = vars(ap.parse_args())
 print("[INFO] loading files...")
 experimentsPaths = glob.glob(args["dataset"] + args["extension"])
 
+#### 2) EXPLORATORY DATA ANALYSIS ####
+from dataloader import DataLoader
 
+dl = DataLoader()
+experiments = dl.load(experimentsPaths)
 
 
 
