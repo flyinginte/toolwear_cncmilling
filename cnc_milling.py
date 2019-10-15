@@ -10,7 +10,7 @@ is sought. For that end, the following steps are undertaken:
 import glob
 import argparse
 
-# construct argument parser and parse arguments
+# construct argument parser and parse arguments (C:/Users/thiag/Desktop/MachineLearning/projects/toolwear_cncmilling/*.csv)
 ap = argparse.ArgumentParser()
 ap.add_argument("-d", "--dataset", required = True, help = "path to input dataset")
 ap.add_argument("-e", "--extension", required = True, help = "extension of the file")
@@ -24,11 +24,9 @@ experimentsPaths = glob.glob(args["dataset"] + args["extension"])
 from dataloader import DataLoader
 import matplotlib.pyplot as plt
 
-# load experiment datasets
+# load datasets: experiments contain the measured data; outputs contain the results of the experiment
 dl = DataLoader()
 experiments, outputs = dl.load(experimentsPaths)
 
-
-
-
-
+""" Plots of the Data are analyzed in the Jupyter Notebook file """
+spindle_inertia = 12.0 # kg.m²
