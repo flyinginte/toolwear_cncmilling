@@ -1,5 +1,9 @@
 # toolwear_cncmilling
 
+This repo contains some investigations on the CNC Milling Dataset disposed by the University of Michigan Smart Lab. An Exploratory Data Analysis is undertaken, in order to find correlations and come up with a valid model that translates the values of the measured physical variables into the evolution of tool wear. 
+
+## Description
+
 CNC MILLING DATASET - UNIVERSITY OF MICHIGAN SMART LAB
 
 April 2018
@@ -156,3 +160,9 @@ Machining_Process: the current machining stage being performed. Includes prepara
 
 
 Note: Some variables will not accurately reflect the operation of the CNC machine. This can usually be detected by when M1_CURRENT_FEEDRATE reads 50, when X1 ActualPosition reads 198, or when M1_CURRENT_PROGRAM_NUMBER does not read 0. The source of these errors has not been identified.
+
+## TO DO
+
+- Stablish a correlation among Fourier Transform features for Spindle Power Output signal and Tool Wear/Quality,
+- Investigate the influence of both Spindle Current and Voltage output and Tool Wear/Quality,
+- Develop a tool wear/quality model, which predicts the result of the process in beforehand by means of a time series analysis of the signals.
